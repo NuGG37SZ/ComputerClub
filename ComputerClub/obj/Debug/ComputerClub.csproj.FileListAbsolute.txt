@@ -1,0 +1,17 @@
+C:\Users\fdafw\source\repos\ComputerClub\bin\Debug\ComputerClub.exe.config
+C:\Users\fdafw\source\repos\ComputerClub\bin\Debug\ComputerClub.exe
+C:\Users\fdafw\source\repos\ComputerClub\bin\Debug\ComputerClub.pdb
+C:\Users\fdafw\source\repos\ComputerClub\obj\Debug\ComputerClub.csproj.AssemblyReference.cache
+C:\Users\fdafw\source\repos\ComputerClub\obj\Debug\ComputerClub.Properties.Resources.resources
+C:\Users\fdafw\source\repos\ComputerClub\obj\Debug\ComputerClub.csproj.GenerateResource.cache
+C:\Users\fdafw\source\repos\ComputerClub\obj\Debug\ComputerClub.csproj.CoreCompileInputs.cache
+C:\Users\fdafw\source\repos\ComputerClub\obj\Debug\ComputerClub.exe
+C:\Users\fdafw\source\repos\ComputerClub\obj\Debug\ComputerClub.pdb
+C:\Users\fdafw\source\repos\ComputerClub\obj\Debug\ComputerClub.SessionsForm.resources
+C:\Users\fdafw\source\repos\ComputerClub\bin\Debug\System.Data.SQLite.dll
+C:\Users\fdafw\source\repos\ComputerClub\bin\Debug\System.Data.SQLite.xml
+C:\Users\fdafw\source\repos\ComputerClub\obj\Debug\ComputerClub.ClientsForm.resources
+C:\Users\fdafw\source\repos\ComputerClub\obj\Debug\ComputerClub.ComputersForm.resources
+C:\Users\fdafw\source\repos\ComputerClub\obj\Debug\Computer.25CB9B4C.Up2Date
+C:\Users\fdafw\source\repos\ComputerClub\obj\Debug\ComputerClub.MainForm.resources
+C:\Users\fdafw\source\repos\ComputerClub\obj\Debug\ComputerClub.HallsForm.resources
