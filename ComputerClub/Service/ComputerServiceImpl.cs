@@ -53,6 +53,11 @@ namespace ComputerClub.Service
             return _computerRepository.GetById(id);
         }
 
+        public int GetPricePerHouseByComputerId(int id)
+        {
+            return _computerRepository.GetPricePerHouseByComputerId(id);
+        }
+
         public void Update(int id, Computer computer)
         {
             _computerRepository.Update(id, computer);

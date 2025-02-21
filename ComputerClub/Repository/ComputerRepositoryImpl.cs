@@ -35,8 +35,6 @@ namespace ComputerClub.Repository
             }
         }
 
-
-
         public void Delete(int id)
         {
             using (SQLiteConnection connection = new SQLiteConnection(ConnectionStringProvider.GetConnectionString()))
@@ -180,6 +178,34 @@ namespace ComputerClub.Repository
                 }
             }
             return null;
+        }
+
+        public int GetPricePerHouseByComputerId(int id)
+        {
+            using(SQLiteConnection connection = new SQLiteConnection(ConnectionStringProvider.GetConnectionString()))
+            {
+                connection.Open();
+
+                string sql = "SELECT halls.price_per_hour AS price_per_hour " +
+                    "FROM computers " +
+                    "INNER JOIN halls ON computers.hall_id = halls.id " +
+                    "WHERE computers.id = @id";
+
+                using (SQLiteCommand command = new SQLiteCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+
+                    using(SQLiteDataReader reader = command.ExecuteReader()) 
+                    {
+                        while(reader.Read())
+                        {
+                            int pricePerHour = Convert.ToInt32(reader["price_per_hour"]);
+                            return pricePerHour;
+                        }
+                    }
+                }
+            }
+            return 0;
         }
 
         public void Update(int id, Computer entity)

@@ -13,7 +13,7 @@ namespace ComputerClub.Mapper
             computerDisplay.Id = computer.Id;
             computerDisplay.HallName = _repository.GetById(computer.HallId).Name;
             computerDisplay.PricePerHour = _repository.GetById(computer.HallId).PricePerHour;
-            computer.IsBusy = computer.IsBusy;
+            computerDisplay.IsBusy = computer.IsBusy;
             return computerDisplay;
         }
     }

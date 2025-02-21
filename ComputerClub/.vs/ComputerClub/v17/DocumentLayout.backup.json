@@ -1,18 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\fdafw\\source\\repos\\ComputerClub\\",
+  "WorkspaceRootPath": "C:\\Users\\fdafw\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\ComputerClub\\ComputerClub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AE403784-660F-4FA9-80F7-F49079B2A63E}|ComputerClub.csproj|c:\\users\\fdafw\\source\\repos\\computerclub\\entity\\hall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE403784-660F-4FA9-80F7-F49079B2A63E}|ComputerClub.csproj|solutionrelative:entity\\hall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AE403784-660F-4FA9-80F7-F49079B2A63E}|ComputerClub.csproj|c:\\users\\fdafw\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\computerclub\\computerclub\\service\\sessionserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE403784-660F-4FA9-80F7-F49079B2A63E}|ComputerClub.csproj|solutionrelative:service\\sessionserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE403784-660F-4FA9-80F7-F49079B2A63E}|ComputerClub.csproj|c:\\users\\fdafw\\source\\repos\\computerclub\\hallsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE403784-660F-4FA9-80F7-F49079B2A63E}|ComputerClub.csproj|solutionrelative:hallsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AE403784-660F-4FA9-80F7-F49079B2A63E}|ComputerClub.csproj|c:\\users\\fdafw\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\computerclub\\computerclub\\sessionsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AE403784-660F-4FA9-80F7-F49079B2A63E}|ComputerClub.csproj|solutionrelative:sessionsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE403784-660F-4FA9-80F7-F49079B2A63E}|ComputerClub.csproj|c:\\users\\fdafw\\source\\repos\\computerclub\\repository\\hallrepositoryimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE403784-660F-4FA9-80F7-F49079B2A63E}|ComputerClub.csproj|solutionrelative:repository\\hallrepositoryimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AE403784-660F-4FA9-80F7-F49079B2A63E}|ComputerClub.csproj|c:\\users\\fdafw\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\computerclub\\computerclub\\sessionsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE403784-660F-4FA9-80F7-F49079B2A63E}|ComputerClub.csproj|solutionrelative:sessionsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE403784-660F-4FA9-80F7-F49079B2A63E}|ComputerClub.csproj|c:\\users\\fdafw\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\computerclub\\computerclub\\computersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AE403784-660F-4FA9-80F7-F49079B2A63E}|ComputerClub.csproj|solutionrelative:computersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE403784-660F-4FA9-80F7-F49079B2A63E}|ComputerClub.csproj|c:\\users\\fdafw\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\computerclub\\computerclub\\computersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE403784-660F-4FA9-80F7-F49079B2A63E}|ComputerClub.csproj|solutionrelative:computersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,46 +30,74 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Hall.cs",
-              "DocumentMoniker": "C:\\Users\\fdafw\\source\\repos\\ComputerClub\\Entity\\Hall.cs",
-              "RelativeDocumentMoniker": "Entity\\Hall.cs",
-              "ToolTip": "C:\\Users\\fdafw\\source\\repos\\ComputerClub\\Entity\\Hall.cs",
-              "RelativeToolTip": "Entity\\Hall.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ComputersForm.cs",
+              "DocumentMoniker": "C:\\Users\\fdafw\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\ComputerClub\\ComputerClub\\ComputersForm.cs",
+              "RelativeDocumentMoniker": "ComputersForm.cs",
+              "ToolTip": "C:\\Users\\fdafw\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\ComputerClub\\ComputerClub\\ComputersForm.cs",
+              "RelativeToolTip": "ComputersForm.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAiwGUAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T18:18:56.823Z",
+              "WhenOpened": "2025-02-21T18:24:39.261Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HallRepositoryImpl.cs",
-              "DocumentMoniker": "C:\\Users\\fdafw\\source\\repos\\ComputerClub\\Repository\\HallRepositoryImpl.cs",
-              "RelativeDocumentMoniker": "Repository\\HallRepositoryImpl.cs",
-              "ToolTip": "C:\\Users\\fdafw\\source\\repos\\ComputerClub\\Repository\\HallRepositoryImpl.cs",
-              "RelativeToolTip": "Repository\\HallRepositoryImpl.cs",
-              "ViewState": "AgIAAMYAAAAAAAAAAAAAAJ0AAAARAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ComputersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\fdafw\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\ComputerClub\\ComputerClub\\ComputersForm.cs",
+              "RelativeDocumentMoniker": "ComputersForm.cs",
+              "ToolTip": "C:\\Users\\fdafw\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\ComputerClub\\ComputerClub\\ComputersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "ComputersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T18:17:48.216Z",
+              "WhenOpened": "2025-02-21T18:22:03.843Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SessionsForm.cs",
+              "DocumentMoniker": "C:\\Users\\fdafw\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\ComputerClub\\ComputerClub\\SessionsForm.cs",
+              "RelativeDocumentMoniker": "SessionsForm.cs",
+              "ToolTip": "C:\\Users\\fdafw\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\ComputerClub\\ComputerClub\\SessionsForm.cs",
+              "RelativeToolTip": "SessionsForm.cs",
+              "ViewState": "AgIAABkBAAAAAAAAAAAAACcBAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T18:22:17.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SessionServiceImpl.cs",
+              "DocumentMoniker": "C:\\Users\\fdafw\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\ComputerClub\\ComputerClub\\Service\\SessionServiceImpl.cs",
+              "RelativeDocumentMoniker": "Service\\SessionServiceImpl.cs",
+              "ToolTip": "C:\\Users\\fdafw\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\ComputerClub\\ComputerClub\\Service\\SessionServiceImpl.cs",
+              "RelativeToolTip": "Service\\SessionServiceImpl.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAAB0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T18:18:39.387Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HallsForm.cs",
-              "DocumentMoniker": "C:\\Users\\fdafw\\source\\repos\\ComputerClub\\HallsForm.cs",
-              "RelativeDocumentMoniker": "HallsForm.cs",
-              "ToolTip": "C:\\Users\\fdafw\\source\\repos\\ComputerClub\\HallsForm.cs",
-              "RelativeToolTip": "HallsForm.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAABUAAAA2AAAAAAAAAA==",
+              "Title": "SessionsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\fdafw\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\ComputerClub\\ComputerClub\\SessionsForm.cs",
+              "RelativeDocumentMoniker": "SessionsForm.cs",
+              "ToolTip": "C:\\Users\\fdafw\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\ComputerClub\\ComputerClub\\SessionsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "SessionsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T18:16:54.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-21T18:08:41.624Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             }
           ]
         }

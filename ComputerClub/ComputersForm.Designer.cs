@@ -153,6 +153,7 @@
             this.computerIdBox.Name = "computerIdBox";
             this.computerIdBox.Size = new System.Drawing.Size(282, 31);
             this.computerIdBox.TabIndex = 16;
+            this.computerIdBox.SelectedValueChanged += new System.EventHandler(this.ComputerIdBox_SelectedValueChanged);
             // 
             // panel1
             // 

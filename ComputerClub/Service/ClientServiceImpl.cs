@@ -38,6 +38,11 @@ namespace ComputerClub.Service
             return _clientRepository.GetById(id);
         }
 
+        public Client GetClientByLogin(string login)
+        {
+            return _clientRepository.GetClientByLogin(login);
+        }
+
         public void Update(int id, Client client)
         {
             _clientRepository.Update(id, client);

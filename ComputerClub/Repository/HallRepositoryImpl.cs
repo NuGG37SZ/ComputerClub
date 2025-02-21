@@ -23,15 +23,23 @@ namespace ComputerClub.Repository
                     command.Parameters.AddWithValue("@name", entity.Name);
                     command.Parameters.AddWithValue("@price_per_hour", entity.PricePerHour);
                     command.Parameters.AddWithValue("@max_count_computers", entity.MaxCountComputers);
-                    int rowsUpdate = command.ExecuteNonQuery();
 
-                    if (rowsUpdate > 0)
+                    try
                     {
-                        MessageBox.Show($"Вы создали зал, строк обновлено {rowsUpdate}");
+                        int rowsUpdate = command.ExecuteNonQuery();
+
+                        if (rowsUpdate > 0)
+                        {
+                            MessageBox.Show($"Вы создали зал, строк обновлено {rowsUpdate}");
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Создать зал не удалось :(, строк обновлено {rowsUpdate}", "ERROR");
+                        }
                     }
-                    else
+                    catch (Exception)
                     {
-                        MessageBox.Show($"Создать зал не удалось :(, строк обновлено {rowsUpdate}", "ERROR");
+                        MessageBox.Show("Название должно быть уникальным");
                     }
                 }
             }

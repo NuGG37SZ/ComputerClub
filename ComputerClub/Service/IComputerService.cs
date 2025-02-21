@@ -18,5 +18,7 @@ namespace ComputerClub.Service
         List<ComputerDisplay> FindComputerByBusyAndRoom(string text);
 
         List<int> FindAllIdByHallsId(int hallId);
+
+        int GetPricePerHouseByComputerId(int id);
     }
 }

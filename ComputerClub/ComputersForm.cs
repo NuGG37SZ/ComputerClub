@@ -68,7 +68,7 @@ namespace ComputerClub
             int hallId = _hallService.FindHallIdByName(hallNameBox.Text);
             _computerService.Create(new Computer(hallId, false));
             ShowComputerOnDataGrid();
-            FillHallBox();
+            FillComputerBox();
         }
 
         private void UpdateComputer_Click(object sender, EventArgs e)
@@ -77,13 +77,15 @@ namespace ComputerClub
             _computerService.Update(Convert.ToInt32(computerIdBox.Text), 
                 new Computer(hallId, false)
             );
-            ShowComputerOnDataGrid();
+            ShowComputerOnDataGrid(); 
+            FillComputerBox();
         }
 
         private void DeleteComputer_Click(object sender, EventArgs e)
         {
             _computerService.Delete(Convert.ToInt32(computerIdBox.Text));
             ShowComputerOnDataGrid();
+            FillComputerBox();
         }
 
         private void SearchBox_TextChanged(object sender, EventArgs e)
@@ -91,6 +93,13 @@ namespace ComputerClub
             List<ComputerDisplay> computerDisplays = _computerService.FindComputerByBusyAndRoom(searchBox.Text);
             computersGrid.DataSource = computerDisplays;
             ApplySettingsToDataGrid();
+        }
+
+        private void ComputerIdBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Computer currentComputer = _computerService.GetById(Convert.ToInt32(computerIdBox.Text));
+            string name = _hallService.GetById(currentComputer.Id).Name;
+            hallNameBox.Text = name;
         }
     }
 }

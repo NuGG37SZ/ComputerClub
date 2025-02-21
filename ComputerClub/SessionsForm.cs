@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using ComputerClub.Entity;
 using ComputerClub.Service;
-using static System.Windows.Forms.AxHost;
-
 
 namespace ComputerClub
 {
@@ -18,9 +18,7 @@ namespace ComputerClub
 
         private IHallService _hallService;
 
-        private const int vipId = 1, standartId = 2, xboxId = 3, streamerId = 4;
-
-        private int[] _hallsIds = { vipId, standartId, xboxId, streamerId };
+        private List<int> _hallsIds;
 
         public SessionsForm()
         {
@@ -29,15 +27,10 @@ namespace ComputerClub
             _hallService = new HallServiceImpl();
             _computerService = new ComputerServiceImpl();
             _clientService = new ClientServiceImpl();
-            PaintStandartHall();
-            PaintVipHall(60, 220, 0);
-            PaintVipHall(580, 220, 5);
-            PaintStreamerHall(80, 310, 0);
-            PaintStreamerHall(680, 310, 1);
-            PaintXboxHall();
-            FillSessionBox();
-            FillClientBox();
-            FillComputerBox();
+            _hallsIds = _hallService.GetAll().Select(el => el.Id).ToList();
+            PaintAllHalls();
+            FillAllBox();
+            StartTimer();
         }
 
         private void PaintStandartHall()
@@ -189,6 +182,23 @@ namespace ComputerClub
             }
         }
 
+        private void PaintAllHalls()
+        {
+            PaintStandartHall();
+            PaintVipHall(60, 220, 0);
+            PaintVipHall(580, 220, 5);
+            PaintStreamerHall(80, 310, 0);
+            PaintStreamerHall(680, 310, 1);
+            PaintXboxHall();
+        }
+
+        private void FillAllBox()
+        {
+            FillSessionBox();
+            FillClientBox();
+            FillComputerBox();
+        }
+
         private void FillSessionBox()
         {
             sessionBox.Items.Clear();
@@ -219,22 +229,76 @@ namespace ComputerClub
         private void SessionBox_SelectedValueChanged(object sender, EventArgs e)
         {
             Session currentSession = _sessionService.GetById(Convert.ToInt32(sessionBox.Text));
-            
+            Computer currentComputer = _computerService.GetById(currentSession.ComputerId);
+            computerBox.Text = currentSession.ComputerId.ToString();
+            clientBox.Text = _clientService.GetById(currentSession.ClientId).Login;
+            startPlay.Value = currentSession.StartPlay;
+            if (currentComputer.IsBusy)
+                isBusyBox.Text = "Да";
+            else
+                isBusyBox.Text = "Нет";
         }
 
         private void AddSession_Click(object sender, EventArgs e)
         {
+            Client currentClient = _clientService.GetClientByLogin(clientBox.Text);
+            Computer currentComputer = _computerService.GetById(Convert.ToInt32(computerBox.Text));
+            currentComputer.IsBusy = CheckBusyComputer();
+            _computerService.Update(currentComputer.Id, currentComputer);
 
+            _sessionService.Create(new Session(
+                   currentClient.Id,
+                   currentComputer.Id,
+                   Convert.ToDateTime(startPlay.Text),
+                   Convert.ToDateTime(endPlay.Text)
+            ));
+            FillAllBox();
+            PaintAllHalls();
+        }
+
+        private void StartTimer()
+        {
+            CheckSessions.Interval = 300000;
+            CheckSessions.Enabled = true;
+            CheckSessions.Start();
+        }
+
+        private void CheckSessions_Tick(object sender, EventArgs e)
+        {
+            _sessionService.CheckEndSession();
         }
 
         private void UpdateSession_Click(object sender, EventArgs e)
         {
+            Client currentClient = _clientService.GetClientByLogin(clientBox.Text);
+            Computer currentComputer = _computerService.GetById(Convert.ToInt32(computerBox.Text));
+            currentComputer.IsBusy = CheckBusyComputer();
+            _computerService.Update(currentComputer.Id, currentComputer);
 
+            _sessionService.Update(Convert.ToInt32(sessionBox.Text), new Session(
+                   currentClient.Id,
+                   currentComputer.Id,
+                   Convert.ToDateTime(startPlay.Text),
+                   Convert.ToDateTime(endPlay.Text)
+            ));
+            FillAllBox();
+            PaintAllHalls();
+        }
+
+        private bool CheckBusyComputer()
+        {
+            return isBusyBox.Text.Contains("Да");
         }
 
         private void DeleteSession_Click(object sender, EventArgs e)
         {
-
+            Computer currentComputer = _computerService.GetById(Convert.ToInt32(computerBox.Text));
+            currentComputer.IsBusy = false;
+            _computerService.Update(currentComputer.Id, currentComputer);
+            _sessionService.Delete(Convert.ToInt32(sessionBox.Text));
+            
+            FillAllBox();
+            PaintAllHalls();
         }
 
     }

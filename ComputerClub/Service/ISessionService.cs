@@ -14,5 +14,7 @@ namespace ComputerClub.Service
         void Update(int id, Session session);
 
         void Delete(int id);
+
+        void CheckEndSession();
     }
 }

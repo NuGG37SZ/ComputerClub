@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.swapPanelForm = new System.Windows.Forms.Panel();
             this.controlPanel = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
+            this.isBusyBox = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.deleteSession = new System.Windows.Forms.Button();
             this.addSession = new System.Windows.Forms.Button();
@@ -55,9 +56,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.CheckSessions = new System.Windows.Forms.Timer(this.components);
             this.swapPanelForm.SuspendLayout();
             this.controlPanel.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.computersRoomsPanel.SuspendLayout();
             this.SuspendLayout();
@@ -76,7 +77,13 @@
             // controlPanel
             // 
             this.controlPanel.BackColor = System.Drawing.Color.Gray;
-            this.controlPanel.Controls.Add(this.panel4);
+            this.controlPanel.Controls.Add(this.label14);
+            this.controlPanel.Controls.Add(this.label13);
+            this.controlPanel.Controls.Add(this.label12);
+            this.controlPanel.Controls.Add(this.label5);
+            this.controlPanel.Controls.Add(this.label4);
+            this.controlPanel.Controls.Add(this.label2);
+            this.controlPanel.Controls.Add(this.isBusyBox);
             this.controlPanel.Controls.Add(this.groupBox1);
             this.controlPanel.Controls.Add(this.endPlay);
             this.controlPanel.Controls.Add(this.startPlay);
@@ -90,92 +97,83 @@
             this.controlPanel.Size = new System.Drawing.Size(1039, 225);
             this.controlPanel.TabIndex = 2;
             // 
-            // panel4
+            // label14
             // 
-            this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.radioButton3);
-            this.panel4.Controls.Add(this.radioButton2);
-            this.panel4.Controls.Add(this.radioButton1);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(612, 33);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(416, 178);
-            this.panel4.TabIndex = 9;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(304, 26);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(86, 23);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Номер ПК";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(12, 27);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(108, 23);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Номер сесси";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(304, 88);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(106, 23);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Занят ли ПК";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(21, 82);
+            this.label5.Location = new System.Drawing.Point(12, 87);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 23);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Прибыль";
+            this.label5.Size = new System.Drawing.Size(67, 23);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Клиент";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(21, 49);
+            this.label4.Location = new System.Drawing.Point(304, 146);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(180, 23);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Количество клиентов";
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
-            this.radioButton3.ForeColor = System.Drawing.Color.White;
-            this.radioButton3.Location = new System.Drawing.Point(323, 113);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(59, 27);
-            this.radioButton3.TabIndex = 4;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Год";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
-            this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(323, 80);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(79, 27);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Месяц";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
-            this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(323, 47);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(71, 27);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "День";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.label4.Size = new System.Drawing.Size(100, 23);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Конец игры";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F);
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(170, 6);
+            this.label2.Location = new System.Drawing.Point(12, 147);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 26);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Данные";
+            this.label2.Size = new System.Drawing.Size(97, 23);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Старт игры";
+            // 
+            // isBusyBox
+            // 
+            this.isBusyBox.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
+            this.isBusyBox.FormattingEnabled = true;
+            this.isBusyBox.Items.AddRange(new object[] {
+            "Да",
+            "Нет"});
+            this.isBusyBox.Location = new System.Drawing.Point(304, 114);
+            this.isBusyBox.Name = "isBusyBox";
+            this.isBusyBox.Size = new System.Drawing.Size(280, 31);
+            this.isBusyBox.TabIndex = 9;
             // 
             // groupBox1
             // 
@@ -184,7 +182,7 @@
             this.groupBox1.Controls.Add(this.updateSession);
             this.groupBox1.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(349, 33);
+            this.groupBox1.Location = new System.Drawing.Point(774, 33);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(238, 178);
             this.groupBox1.TabIndex = 8;
@@ -229,10 +227,10 @@
             // 
             // endPlay
             // 
-            this.endPlay.CustomFormat = "dd.MM.yyyy hh:mm";
+            this.endPlay.CustomFormat = "dd.MM.yyyy HH:mm";
             this.endPlay.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
             this.endPlay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.endPlay.Location = new System.Drawing.Point(16, 184);
+            this.endPlay.Location = new System.Drawing.Point(304, 172);
             this.endPlay.Name = "endPlay";
             this.endPlay.Size = new System.Drawing.Size(282, 27);
             this.endPlay.TabIndex = 7;
@@ -240,52 +238,54 @@
             // 
             // startPlay
             // 
-            this.startPlay.CustomFormat = "dd.MM.yyyy hh:mm";
+            this.startPlay.CustomFormat = "dd.MM.yyyy HH:mm";
             this.startPlay.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
             this.startPlay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.startPlay.Location = new System.Drawing.Point(16, 150);
+            this.startPlay.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.startPlay.Location = new System.Drawing.Point(12, 172);
             this.startPlay.Name = "startPlay";
             this.startPlay.Size = new System.Drawing.Size(282, 27);
             this.startPlay.TabIndex = 6;
-            this.startPlay.Value = new System.DateTime(2025, 2, 19, 0, 0, 0, 0);
+            this.startPlay.Value = new System.DateTime(2025, 2, 21, 0, 0, 0, 0);
             // 
             // sessionBox
             // 
             this.sessionBox.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
             this.sessionBox.FormattingEnabled = true;
-            this.sessionBox.Location = new System.Drawing.Point(16, 39);
+            this.sessionBox.Location = new System.Drawing.Point(16, 53);
             this.sessionBox.Name = "sessionBox";
-            this.sessionBox.Size = new System.Drawing.Size(282, 31);
+            this.sessionBox.Size = new System.Drawing.Size(278, 31);
             this.sessionBox.TabIndex = 5;
-            this.sessionBox.Text = "Номер";
             this.sessionBox.SelectedValueChanged += new System.EventHandler(this.SessionBox_SelectedValueChanged);
             // 
             // computerBox
             // 
+            this.computerBox.DropDownHeight = 70;
             this.computerBox.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
             this.computerBox.FormattingEnabled = true;
-            this.computerBox.Location = new System.Drawing.Point(16, 76);
+            this.computerBox.IntegralHeight = false;
+            this.computerBox.Location = new System.Drawing.Point(304, 53);
             this.computerBox.Name = "computerBox";
-            this.computerBox.Size = new System.Drawing.Size(282, 31);
+            this.computerBox.Size = new System.Drawing.Size(277, 31);
             this.computerBox.TabIndex = 4;
-            this.computerBox.Text = "ПК";
             // 
             // clientBox
             // 
+            this.clientBox.DropDownHeight = 70;
             this.clientBox.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
             this.clientBox.FormattingEnabled = true;
-            this.clientBox.Location = new System.Drawing.Point(16, 113);
+            this.clientBox.IntegralHeight = false;
+            this.clientBox.Location = new System.Drawing.Point(12, 113);
             this.clientBox.Name = "clientBox";
             this.clientBox.Size = new System.Drawing.Size(282, 31);
             this.clientBox.TabIndex = 3;
-            this.clientBox.Text = "Клиент";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(81, 3);
+            this.label3.Location = new System.Drawing.Point(227, 3);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 23);
             this.label3.TabIndex = 2;
@@ -385,6 +385,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Текущие сессии";
             // 
+            // CheckSessions
+            // 
+            this.CheckSessions.Tick += new System.EventHandler(this.CheckSessions_Tick);
+            // 
             // SessionsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -396,8 +400,6 @@
             this.swapPanelForm.ResumeLayout(false);
             this.controlPanel.ResumeLayout(false);
             this.controlPanel.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.computersRoomsPanel.ResumeLayout(false);
             this.computersRoomsPanel.PerformLayout();
@@ -409,13 +411,6 @@
 
         private System.Windows.Forms.Panel swapPanelForm;
         private System.Windows.Forms.Panel controlPanel;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button deleteSession;
         private System.Windows.Forms.Button addSession;
@@ -434,5 +429,13 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox isBusyBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Timer CheckSessions;
     }
 }

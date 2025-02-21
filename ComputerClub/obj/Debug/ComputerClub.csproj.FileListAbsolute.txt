@@ -32,3 +32,9 @@ C:\Users\fdafw\OneDrive\Документы\GitHub\ComputerClub\ComputerClub\obj\
 C:\Users\fdafw\OneDrive\Документы\GitHub\ComputerClub\ComputerClub\obj\Debug\Computer.25CB9B4C.Up2Date
 C:\Users\fdafw\OneDrive\Документы\GitHub\ComputerClub\ComputerClub\obj\Debug\ComputerClub.exe
 C:\Users\fdafw\OneDrive\Документы\GitHub\ComputerClub\ComputerClub\obj\Debug\ComputerClub.pdb
+C:\Users\fdafw\OneDrive\Документы\GitHub\ComputerClub\ComputerClub\obj\Debug\ComputerClub.AuthForm.resources
+C:\Users\fdafw\OneDrive\Документы\GitHub\ComputerClub\ComputerClub\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\fdafw\OneDrive\Документы\GitHub\ComputerClub\ComputerClub\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\fdafw\OneDrive\Документы\GitHub\ComputerClub\ComputerClub\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.xml
+C:\Users\fdafw\OneDrive\Документы\GitHub\ComputerClub\ComputerClub\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.xml
+C:\Users\fdafw\OneDrive\Документы\GitHub\ComputerClub\ComputerClub\bin\Debug\Guna.UI2.dll

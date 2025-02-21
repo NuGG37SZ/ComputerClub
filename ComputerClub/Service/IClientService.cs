@@ -16,5 +16,7 @@ namespace ComputerClub.Service
         void Delete(int id);
 
         List<Client> FindClientsByLoginOrPhone(string text);
+
+        Client GetClientByLogin(string login);
     }
 }

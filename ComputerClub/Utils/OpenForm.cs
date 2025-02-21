@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Threading;
+using System.Windows.Forms;
 
 namespace ComputerClub.Utils
 {
@@ -25,6 +26,17 @@ namespace ComputerClub.Utils
             panel.Tag = form;
             form.BringToFront();
             form.Show();
+        }
+
+        public static void OpenFormNewDialog(Form parent, Form openForm)
+        {
+            parent.Hide();
+            openForm.ShowDialog();
+            if (openForm.DialogResult == DialogResult.OK)
+            {
+                Thread.Sleep(150);
+                parent.Show();
+            }
         }
     }
 }

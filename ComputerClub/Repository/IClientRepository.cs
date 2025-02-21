@@ -6,5 +6,7 @@ namespace ComputerClub.Repository
     public interface IClientRepository : ICRUDRepository<Client>
     {
         List<Client> FindClientsByLoginOrPhone(string text);
+
+        Client GetClientByLogin(string login);
     }
 }

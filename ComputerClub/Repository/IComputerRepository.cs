@@ -8,5 +8,7 @@ namespace ComputerClub.Repository
         List<ComputerDisplay> FindComputerByBusyAndRoom(string text);
 
         List<int> FindAllIdByHallsId(int hallId);
+
+        int GetPricePerHouseByComputerId(int id);
     }
 }

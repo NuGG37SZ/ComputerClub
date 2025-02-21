@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ComputerClub
@@ -16,7 +13,15 @@ namespace ComputerClub
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            AuthForm authForm = new AuthForm();
+
+            if (authForm.ShowDialog() == DialogResult.OK)
+            {
+                if (!authForm.IsDisposed)
+                {
+                    Application.Run(new MainForm());
+                }
+            }
         }
     }
 }

@@ -159,6 +159,35 @@ namespace ComputerClub.Repository
             return null;
         }
 
+        public Client GetClientByLogin(string login)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectionStringProvider.GetConnectionString()))
+            {
+                connection.Open();
+
+                string sql = "SELECT * FROM clients " +
+                    "WHERE login = @login";
+
+                using (SQLiteCommand command = new SQLiteCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@login", login);
+
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int id = Convert.ToInt32(reader["id"]);
+                            double discount = Convert.ToDouble(reader["discount"]);
+                            string phone = reader["phone"].ToString();
+                            int balance = Convert.ToInt32(reader["balance"]);
+                            return new Client(id, login, discount, phone, balance);
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
         public void Update(int id, Client entity)
         {
             using (SQLiteConnection connection = new SQLiteConnection(ConnectionStringProvider.GetConnectionString()))
