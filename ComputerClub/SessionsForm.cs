@@ -211,7 +211,10 @@ namespace ComputerClub
         private void FillComputerBox()
         {
             computerBox.Items.Clear();
-            foreach (var computer in _computerService.GetAll())
+            List<Computer> computers = new List<Computer>();
+            computers = _computerService.GetAll().FindAll(el => !el.IsBusy).ToList();
+
+            foreach (var computer in computers)
             {
                 computerBox.Items.Add(computer.Id);
             }
