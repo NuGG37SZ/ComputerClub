@@ -1,4 +1,5 @@
-﻿using ComputerClub.Entity;
+﻿using System.Collections.Generic;
+using ComputerClub.Entity;
 
 namespace ComputerClub.Repository
 {

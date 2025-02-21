@@ -6,5 +6,7 @@ namespace ComputerClub.Repository
     public interface IComputerRepository : ICRUDRepository<Computer>
     {
         List<ComputerDisplay> FindComputerByBusyAndRoom(string text);
+
+        List<int> FindAllIdByHallsId(int hallId);
     }
 }

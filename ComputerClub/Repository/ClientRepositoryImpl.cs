@@ -21,19 +21,26 @@ namespace ComputerClub.Repository
 
                 using (SQLiteCommand command = new SQLiteCommand(sql, connection))
                 {
-                    command.Parameters.AddWithValue("@login", entity.Login);
-                    command.Parameters.AddWithValue("@discount", entity.Discount);
-                    command.Parameters.AddWithValue("@phone", entity.Phone);
-                    command.Parameters.AddWithValue("@balance", entity.Balance);
-                    int rowsUpdate = command.ExecuteNonQuery();
+                    try
+                    {
+                        command.Parameters.AddWithValue("@login", entity.Login);
+                        command.Parameters.AddWithValue("@discount", entity.Discount);
+                        command.Parameters.AddWithValue("@phone", entity.Phone);
+                        command.Parameters.AddWithValue("@balance", entity.Balance);
+                        int rowsUpdate = command.ExecuteNonQuery();
 
-                    if (rowsUpdate > 0)
+                        if (rowsUpdate > 0)
+                        {
+                            MessageBox.Show($"Вы создали клиента, строк обновлено {rowsUpdate}");
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Создать клиента не удалось :(, строк обновлено {rowsUpdate}", "ERROR");
+                        }
+                    } 
+                    catch(SQLiteException)
                     {
-                        MessageBox.Show($"Вы создали клиента, строк обновлено {rowsUpdate}");
-                    }
-                    else
-                    {
-                        MessageBox.Show($"Создать клиента не удалось :(, строк обновлено {rowsUpdate}", "ERROR");
+                        MessageBox.Show("Логин должен быть уникальным!", "ERROR");
                     }
                 }
             }

@@ -35,6 +35,8 @@ namespace ComputerClub.Repository
             }
         }
 
+
+
         public void Delete(int id)
         {
             using (SQLiteConnection connection = new SQLiteConnection(ConnectionStringProvider.GetConnectionString()))
@@ -58,6 +60,36 @@ namespace ComputerClub.Repository
                     }
                 }
             }
+        }
+
+        public List<int> FindAllIdByHallsId(int hallId)
+        {
+            List<int> ids = new List<int>();
+
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectionStringProvider.GetConnectionString()))
+            {
+                connection.Open();
+
+                string sql = "SELECT computers.id AS id " +
+                    "FROM computers " +
+                    "INNER JOIN halls ON computers.hall_id = halls.id " +
+                    "WHERE halls.id = @id";
+
+                using (SQLiteCommand command = new SQLiteCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@id", hallId);
+
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int id = Convert.ToInt32(reader["id"]);
+                            ids.Add(id);
+                        }
+                    }
+                }
+            }
+            return ids;
         }
 
         public List<ComputerDisplay> FindComputerByBusyAndRoom(string text)

@@ -33,6 +33,11 @@ namespace ComputerClub.Service
             _computerRepository.Delete(id);
         }
 
+        public List<int> FindAllIdByHallsId(int hallId)
+        {
+            return _computerRepository.FindAllIdByHallsId(hallId);
+        }
+
         public List<ComputerDisplay> FindComputerByBusyAndRoom(string text)
         {
             return _computerRepository.FindComputerByBusyAndRoom(text);

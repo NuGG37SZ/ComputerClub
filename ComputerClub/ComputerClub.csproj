@@ -98,6 +98,8 @@
     <Compile Include="Service\ClientServiceImpl.cs" />
     <Compile Include="Service\IComputerService.cs" />
     <Compile Include="Service\IHallService.cs" />
+    <Compile Include="Service\ISessionService.cs" />
+    <Compile Include="Service\SessionServiceImpl.cs" />
     <Compile Include="SessionsForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -16,5 +16,7 @@ namespace ComputerClub.Service
         void Delete(int id);
 
         List<ComputerDisplay> FindComputerByBusyAndRoom(string text);
+
+        List<int> FindAllIdByHallsId(int hallId);
     }
 }
