@@ -64,27 +64,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuthForm.cs">
+    <Compile Include="View\AuthForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AuthForm.Designer.cs">
+    <Compile Include="View\AuthForm.Designer.cs">
       <DependentUpon>AuthForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientsForm.cs">
+    <Compile Include="View\ClientsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientsForm.Designer.cs">
+    <Compile Include="View\ClientsForm.Designer.cs">
       <DependentUpon>ClientsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ComputersForm.cs">
+    <Compile Include="View\ComputersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ComputersForm.Designer.cs">
+    <Compile Include="View\ComputersForm.Designer.cs">
       <DependentUpon>ComputersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Entity\Client.cs" />
     <Compile Include="Entity\Computer.cs" />
-    <Compile Include="Entity\ComputerDisplay.cs" />
+    <Compile Include="DTO\ComputerDisplay.cs" />
     <Compile Include="Entity\Hall.cs" />
     <Compile Include="Entity\Session.cs" />
     <Compile Include="Entity\User.cs" />
@@ -98,16 +98,16 @@
     <Compile Include="Repository\IHallRepository.cs" />
     <Compile Include="Repository\IUserRepository.cs" />
     <Compile Include="Repository\SessionRepositoryImpl.cs" />
-    <Compile Include="HallsForm.cs">
+    <Compile Include="View\HallsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HallsForm.Designer.cs">
+    <Compile Include="View\HallsForm.Designer.cs">
       <DependentUpon>HallsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="View\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -123,28 +123,28 @@
     <Compile Include="Service\IUserService.cs" />
     <Compile Include="Service\SessionServiceImpl.cs" />
     <Compile Include="Service\UserServiceImpl.cs" />
-    <Compile Include="SessionsForm.cs">
+    <Compile Include="View\SessionsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SessionsForm.Designer.cs">
+    <Compile Include="View\SessionsForm.Designer.cs">
       <DependentUpon>SessionsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\ConnectionStringProvider.cs" />
     <Compile Include="Utils\Hash.cs" />
     <Compile Include="Utils\OpenForm.cs" />
-    <EmbeddedResource Include="AuthForm.resx">
+    <EmbeddedResource Include="View\AuthForm.resx">
       <DependentUpon>AuthForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientsForm.resx">
+    <EmbeddedResource Include="View\ClientsForm.resx">
       <DependentUpon>ClientsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ComputersForm.resx">
+    <EmbeddedResource Include="View\ComputersForm.resx">
       <DependentUpon>ComputersForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HallsForm.resx">
+    <EmbeddedResource Include="View\HallsForm.resx">
       <DependentUpon>HallsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -156,7 +156,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SessionsForm.resx">
+    <EmbeddedResource Include="View\SessionsForm.resx">
       <DependentUpon>SessionsForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

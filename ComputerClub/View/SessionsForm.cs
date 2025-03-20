@@ -33,7 +33,7 @@ namespace ComputerClub
             StartTimer();
         }
 
-        private void PaintStandartHall()
+        private void PaintStandartHall(int startX, int startY)
         {
             int count, currentNumEl = 0, rows, columns = 10;
 
@@ -61,8 +61,8 @@ namespace ComputerClub
                         else
                             panel.BackColor = Color.Green;
 
-                        int x = 200 + (j * (panel.Width + 10));
-                        int y = 80 + (i * (panel.Height + 10));
+                        int x = startX + (j * (panel.Width + 10));
+                        int y = startY + (i * (panel.Height + 10));
                         panel.Location = new Point(x, y);
 
                         Label label = new Label();
@@ -184,7 +184,7 @@ namespace ComputerClub
 
         private void PaintAllHalls()
         {
-            PaintStandartHall();
+            PaintStandartHall(200, 80);
             PaintVipHall(60, 220, 0);
             PaintVipHall(580, 220, 5);
             PaintStreamerHall(80, 310, 0);
